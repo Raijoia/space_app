@@ -4,6 +4,7 @@ import Cabecalho from "./components/Cabecalho"
 import BarraLateral from "./components/BarraLateral"
 import Banner from "./components/Banner"
 import backgroundImage from './assets/banner.png'
+import Galeria from "./components/Galeria"
 
 // importa o styles.elementoHTML que quer adicionar e interpola
 const FundoGradiente = styled.div`
@@ -12,13 +13,37 @@ const FundoGradiente = styled.div`
   height: 100vh;
 `
 
+const AppContainer = styled.div`
+  width: 1440px;
+  margin: 0 auto;
+  max-width: 100%;
+`
+
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+`
+
+const ConteudoDaGaleria = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`
+
 function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
-      <Cabecalho />
-      <BarraLateral />
-      <Banner backgroundImage={backgroundImage} texto={'A galeria mais completa de fotos do espaço!'}/>
+      <AppContainer>
+        <Cabecalho />
+        <MainContainer>
+          <BarraLateral />
+          <ConteudoDaGaleria>
+            <Banner backgroundImage={backgroundImage} texto={'A galeria mais completa de fotos do espaço!'}/>
+            <Galeria />
+          </ConteudoDaGaleria>
+        </MainContainer>
+      </AppContainer>
     </FundoGradiente>
   )
 }
