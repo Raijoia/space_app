@@ -1,5 +1,10 @@
 import { styled } from 'styled-components'
-import search from '../../public/imagens/seacrh.svg'
+import search from './seacrh.svg'
+
+const ContainerEstilizado = styled.div`
+    position: relative;
+    display: inline-block;
+`
 
 const CampoTextoEstilizado = styled.input`
     height: 56px;
@@ -18,17 +23,17 @@ const CampoTextoEstilizado = styled.input`
 
 const IconeLupa = styled.img`
     position: absolute;
-    top: 68px;
-    right: 80px;
+    top: 10px;
+    right: 10px;
     width: 38px;
     height: 38px;
 `
 
 export default function CampoTexto(props) {
   return (
-    <>
+    <ContainerEstilizado>
       <CampoTextoEstilizado {...props} />
       <IconeLupa src={search} alt='Lupa de pesquisa' />
-    </>
+    </ContainerEstilizado>
   )
 }
