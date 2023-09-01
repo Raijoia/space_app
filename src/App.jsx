@@ -2,6 +2,8 @@ import { styled } from "styled-components"
 import EstilosGlobais from "./components/EstilosGlobais"
 import Cabecalho from "./components/Cabecalho"
 import BarraLateral from "./components/BarraLateral"
+import Banner from "./components/Banner"
+import backgroundImage from './assets/banner.png'
 
 // importa o styles.elementoHTML que quer adicionar e interpola
 const FundoGradiente = styled.div`
@@ -16,6 +18,7 @@ function App() {
       <EstilosGlobais />
       <Cabecalho />
       <BarraLateral />
+      <Banner backgroundImage={backgroundImage} texto={'A galeria mais completa de fotos do espaço!'}/>
     </FundoGradiente>
   )
 }
