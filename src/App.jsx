@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 import EstilosGlobais from "./components/EstilosGlobais"
+import Cabecalho from "./components/Cabecalho"
 
 // importa o styles.elementoHTML que quer adicionar e interpola
 const FundoGradiente = styled.div`
@@ -12,6 +13,7 @@ function App() {
   return (
     <FundoGradiente>
       <EstilosGlobais />
+      <Cabecalho />
     </FundoGradiente>
   )
 }
