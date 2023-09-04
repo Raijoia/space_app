@@ -1,5 +1,7 @@
+import Titulo from "../Titulo";
+
 export default function Galeria() {
   return (
-    <h2>Navegue pela galeria</h2>
+    <Titulo>Navegue pela galeria</Titulo>
   )
 }
