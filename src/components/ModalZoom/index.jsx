@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ModalZoom() {
+export default function ModalZoom({ foto }) {
   return (
     <>
-      <dialog open>
+      <dialog open={!!foto}>
         <p>Greetings, onde and all!</p>
         <form method='dialog'>
           <button>ok</button>
