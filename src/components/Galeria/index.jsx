@@ -6,6 +6,7 @@ import Imagem from "./Imagem";
 
 const GaleriaContainer = styled.div`
   display: flex;
+  gap: 24px;
 `
 
 const SecaoFluida = styled.section`
@@ -13,8 +14,10 @@ const SecaoFluida = styled.section`
 `
 
 const ImagemContainer = styled.section`
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
 `
 
 export default function Galeria({ fotos = [] }) {
