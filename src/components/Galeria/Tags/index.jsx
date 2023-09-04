@@ -6,7 +6,7 @@ const TagsStyle = styled.div`
     display: flex;
     gap: 24px;
     align-items: center;
-    margin: 60px 0 20px 0;
+    margin-top: 60px;
 `
 
 const TagTitulo = styled.h3`
