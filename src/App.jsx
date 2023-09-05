@@ -10,6 +10,7 @@ import Galeria from "./components/Galeria"
 import fotos from './fotos.json'
 import { useState } from "react"
 import ModalZoom from "./components/ModalZoom"
+import Rodape from "./components/Rodape"
 
 // importa o styles.elementoHTML que quer adicionar e interpola
 const FundoGradiente = styled.div`
@@ -77,6 +78,7 @@ function App() {
         aoFechar={() => setFotoSelecionada(null)}
         aoAlternarFavorito={aoAlternarFavorito}
       />
+      <Rodape />
     </FundoGradiente>
   )
 }
