@@ -29,20 +29,24 @@ const DialogEstilizado = styled.dialog`
     }
 `
 
-export default function ModalZoom({ foto, aoFechar }) {
-  return (
-    <>
-      {foto && 
+export default function ModalZoom({ foto, aoFechar, aoAlternarFavorito }) {
+    return (
         <>
-          <Overlay />
-            <DialogEstilizado open={!!foto} onClose={aoFechar}>
-              <Imagem foto={foto} expandida={true} />
-              <form method='dialog'>
-                <button>ok</button>
-              </form>
-            </DialogEstilizado>
+            {foto && (
+                <>
+                    <Overlay />
+                    <DialogEstilizado open={!!foto} onClose={aoFechar}>
+                        <Imagem 
+                          foto={foto} 
+                          expandida={true} 
+                          aoAlternarFavorito={aoAlternarFavorito} 
+                        />
+                        <form method="dialog">
+                            <button>ok</button>
+                        </form>
+                    </DialogEstilizado>
+                </>
+            )}
         </>
-      }
-    </>
-  )
+    )
 }
