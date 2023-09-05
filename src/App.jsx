@@ -56,6 +56,10 @@ function App() {
     }))
   }
 
+  const filtrarImagens = (id) => {
+    setFotosDaGaleria(fotos.filter(foto => id > 0 ? foto.tagId === id : foto))
+  }
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -69,6 +73,7 @@ function App() {
               aoFotoSelecionada={foto => setFotoSelecionada(foto)} 
               fotos={fotosDaGaleria} 
               aoAlternarFavorito={aoAlternarFavorito}
+              filtrarImagens = {filtrarImagens}
             />
           </ConteudoDaGaleria>
         </MainContainer>

@@ -30,13 +30,13 @@ const Tag = styled.button`
     }
 `
 
-export default function Tags() {
+export default function Tags({ filtrarImagens }) {
   return (
     <TagsStyle>
       <TagTitulo>
         Busque por tags:
       </TagTitulo>
-      {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+      {tags.map(tag => <Tag key={tag.id} onClick={() => filtrarImagens(tag.id)} >{tag.titulo}</Tag>)}
     </TagsStyle>
   )
 }
