@@ -20,7 +20,7 @@ const ImagemContainer = styled.section`
   gap: 24px;
 `
 
-export default function Galeria({ fotos = [], aoFotoSelecionada }) {
+export default function Galeria({ fotos = [], aoFotoSelecionada, aoAlternarFavorito }) {
   return (
     <>
       <Tags />
@@ -30,6 +30,7 @@ export default function Galeria({ fotos = [], aoFotoSelecionada }) {
           <ImagemContainer>
             {fotos.map(foto => 
             <Imagem 
+              aoAlternarFavorito={aoAlternarFavorito}
               aoZoomSolicitado={aoFotoSelecionada}
               key={foto.id} 
               foto={foto}
